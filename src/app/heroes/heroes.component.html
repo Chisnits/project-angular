@@ -1,0 +1,11 @@
+<div class="container">
+    <app-hero-detail [hero]="selectedHero"></app-hero-detail>
+  <h2>My Heroes</h2>
+    <div class="row">
+      <div *ngFor="let hero of heroes" class="col-md-3 hero" (click)="onSelect(hero)">
+        <div class="hero-avatar" [className]="hero.gender === 'Male' ? 'hero-avatar-man hero-avatar' : 'hero-avatar-woman hero-avatar'"></div>
+          <span class="badge">{{hero.id}}</span>
+          <span class="hero-name">{{hero.name}}</span>
+      </div>
+    </div>
+</div>
